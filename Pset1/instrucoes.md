@@ -6,5 +6,5 @@
 # _Instrucões para utilizar o script do MariaDB_ 
  ### Como feito anteriormente no Postgres, no MariaDB eu também separei em dois scripts. 
  * Primeiramente, você entra no MariaDB pelo terminal, usando o comando: `mysql -u root -p` e insira a senha: **"computacao@raiz"**. Feito isso, você usa o script **"create_user_mariadb.sql"**.
- * Logo depois você usa o script **"create_db_mariadb.sql"** que lá vai criar o banco de dados, o schema e todo o corpo do banco de dados.
+ * Logo depois você usa o script **"create_db_mariadb.sql"** você vai digitar o comando: `mysql -u MariaLuiza -p` e digitar a senha: **"123456"**. Depois de feito você usa o script **"create_db_mariadb.sql"**. Nele será criado o banco de dados "uvv" e todo o corpo do mesmo.
 ### Pronto!  
