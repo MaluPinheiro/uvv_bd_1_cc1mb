@@ -152,7 +152,7 @@ FROM (funcionario, departamento, projeto)
 INNER JOIN funcionario AS f ON (departamento.cpf_gerente = f.cpf)
 INNER JOIN projeto AS p ON (departamento.numero_departamento = p.numero_departamento)
 INNER JOIN trabalha_em AS tb ON (p.numero_projeto = tb.numero_projeto)
-WHERE tb.horas = 0 AND funcionario.cpf = tb.cpf_funcionario
+WHERE tb.horas = 0.0 AND funcionario.cpf = tb.cpf_funcionario
 GROUP BY projeto.nome_projeto, departamento.nome_departamento, nome_completo;
 
 -- QUESTÃO DE NÚMERO 13:
