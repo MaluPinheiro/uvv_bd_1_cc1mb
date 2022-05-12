@@ -119,7 +119,6 @@ CONCAT(funcionario.primeiro_nome, " ", funcionario.nome_meio, ".", funcionario.u
 FROM (departamento, projeto, trabalha_em, funcionario)
 INNER JOIN projeto AS p ON (projeto.numero_departamento = departamento.numero_departamento)
 INNER JOIN trabalha_em AS tb ON (trabalha_em.numero_projeto  = projeto.numero_projeto AND trabalha_em.cpf_funcionario = funcionario.cpf)
-INNER JOIN funcionario AS f ON (funcionario.numero_departamento = departamento.numero_departamento)
 WHERE funcionario.numero_departamento = departamento.numero_departamento
 GROUP BY nome_departamento, sobre_projeto, nome_funcionario, horas;
 
