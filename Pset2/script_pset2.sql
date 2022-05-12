@@ -142,7 +142,7 @@ GROUP BY numero_departamento;
 
 SELECT CONCAT(funcionario.primeiro_nome, " ", funcionario.nome_meio, ".",funcionario.ultimo_nome) as nome_funcionario, CONCAT( trabalha_em.numero_projeto, '-', projeto.nome_projeto) AS sobre_projeto , CONCAT( trabalha_em.horas * 50) AS valor_total
 FROM (funcionario, departamento, projeto, trabalha_em)
-WHERE funcionario.cpf = trabalha_em.cpf_funcionario AND departamento.numero_departamento = funcionario.numero_departamento AND funcionario.numero_departamento = projeto.numero_departamento AND projeto.numero_projeto = trabalha_em.numero_projeto
+WHERE funcionario.cpf = trabalha_em.cpf_funcionario AND departamento.numero_departamento = projeto.numero_departamento  AND projeto.numero_projeto = trabalha_em.numero_projeto
 ORDER BY trabalha_em.numero_projeto;
 
 -- QUESTÃO DE NÚMERO 12:
@@ -152,7 +152,7 @@ FROM (funcionario, departamento, projeto)
 INNER JOIN funcionario AS f ON (departamento.cpf_gerente = f.cpf)
 INNER JOIN projeto AS p ON (departamento.numero_departamento = p.numero_departamento)
 INNER JOIN trabalha_em AS tb ON (p.numero_projeto = tb.numero_projeto)
-WHERE tb.horas = 0.0 AND funcionario.cpf = tb.cpf_funcionario
+WHERE tb.horas = 0 AND funcionario.cpf = tb.cpf_funcionario
 GROUP BY projeto.nome_projeto, departamento.nome_departamento, nome_completo;
 
 -- QUESTÃO DE NÚMERO 13:
